@@ -1,0 +1,60 @@
+1) WAP to accept salary from user and find TDS amount:
+
+
+1) if salary is 1--700000:    TDS:0
+2) if salary more than 700000 then calculate TDS amount based following rules:
+
+1--300000       --> 5% TDS
+300000---600000 --> 10% TDS
+600000---900000 --> 15% TDS
+900000---1200000 -->20% TDS
+more than 12L    -->30 TDS
+ 
+10,00000
+
+0-300000-->5%
+3-6 Lacs-->10%
+6-9 lacs-->15%
+1lac--20%
+
+
+import java.util.Scanner;
+public class MiniProSalaryTds
+  {
+    public static void main(String args[])
+    { 
+      double tds=0;
+      Scanner s=new Scanner(System.in);
+      System.out.println("Enter your salary");
+      double salary =s.nextInt();
+      if(salary<=700000)
+      {
+        System.out.println("No TDS");
+      }
+      else if(salary<=1000000)
+      {
+        tds=(0.05*(salary-700000));
+      }
+      else if(salary<=1300000)
+      {
+        tds=(0.1*(salary-1000000))+(0.05*300000);
+      }
+       else if(salary<=1600000)
+      {
+        tds=(0.15*(salary-1300000)+(0.1*300000))+(0.05*300000);
+      }
+      else if(salary<=1900000)
+      {
+        tds=(0.2*(salary-1600000)+0.15*(300000)+(0.1*300000))+(0.05*300000);
+      }
+       else 
+      {
+        tds=(0.3*(salary-1900000))+0.2*(300000)+0.15*(300000)+(0.1*300000)+(0.05*300000);
+      }
+      salary=salary-tds;
+      System.out.println("TDS Amount is "+tds);
+      System.out.println("Salary of the employee is : "+salary);
+    }
+  }
+
+

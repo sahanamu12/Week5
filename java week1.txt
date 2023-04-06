@@ -1,0 +1,50 @@
+1)WAP to print Addition,subtraction,multiplication,division of two numbers
+
+
+class Addition
+  {
+    public static void main(String args[]){
+    int a=5,b=5,sum=0,sub=0,mul=0,div=0;
+      sum=a+b;
+      sub=a-b;
+      mul=a*b;
+      div=a/b;
+      System.out.println("sum is:"+sum);
+      System.out.println("sub is:"+sub);
+      System.out.println("mul is:"+mul);
+      System.out.println("div is:"+div);
+    }
+  }
+
+
+2)WAP to find total and avg marks of given 3 subjects marks.
+
+
+class Average
+  {
+    public static void main(String args[])
+    {
+      int a=60;
+      int b=68;
+      int c=75;
+      int total,average;
+      total=a+b+c;
+      average=total/3;
+      System.out.println("The total of 3 subjects is :" +total);
+      System.out.println("The average of 3 subjects is :" +average);
+    }
+  }
+
+
+3)WAP to accept employee salary and 3 shopping bills and find total shopping amount and spent on shopping on employee salary
+
+public class Bills{
+  public static void main(String args[])
+  {
+    int basic_salary=20000,bill1=2000,bill2=3000,bill3=4000,total_bill=0 ,total_amount=0;
+    total_bill=bill1+bill2+bill3;
+    total_amount=basic_salary*total_bill/100;
+    System.out.println("Total Shopping amount:" + total_bill );
+     System.out.println("Total amount spent for shopping:" awf32+  total_amount );
+    }
+}
